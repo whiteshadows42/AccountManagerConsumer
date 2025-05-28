@@ -1,23 +1,28 @@
-# Accountmanagerconsumer README
+# Account Manager Consumer
+Esta Interface Vaadin é um consumidor de um API REST que simula um sistema de back-office bancário  
+voltado para gestão de contas e movimentações financeiras de clientes. 
 
-- [ ] TODO Replace or update this README with instructions relevant to your application
+## TECNOLOGIAS
+É uma aplicação com um setup mínimo, contendo as seguints tecnologias:
+* Java 17
+* Vaadin 24.7.5
+* Spring Boot 3.4.5
+  
+## Endpoints
+A aplicação consome os seguintes endpoints:
+* Cadastrar novo cliente : POST (http://localhost:8080/api/v1/clients)
+* Cadastrar nova conta bancária pra cliente existente: POST(http://localhost:8080/api/v1/accounts)
+* Consultar saldo da conta cadastrada : GET (http://localhost:8080/api/v1/accounts/{id}/balance)
+* Realizar movimentação entre contas: POST(http://localhost:8080/api/v1/transactions)
+* Consultar extrato de movimentações : GET (http://localhost:8080/api/v1/accounts/{id}/transactions?startDate=...&endDate=...)
 
-To start the application in development mode, import it into your IDE and run the `Application` class. 
-You can also start the application from the command line by running: 
-
+## Fazendo Build da Aplicação e rodando a aplicação
+Para realizar o build e rodar a aplicação deve executar o seguinte comando:
+* Em modo desenvolvimento:
 ```bash
 ./mvnw
 ```
-
-To build the application in production mode, run:
-
+* Em modo produção:
 ```bash
 ./mvnw -Pproduction package
 ```
-
-## Getting Started
-
-The [Getting Started](https://vaadin.com/docs/latest/getting-started) guide will quickly familiarize you with your new
-Accountmanagerconsumer implementation. You'll learn how to set up your development environment, understand the project 
-structure, and find resources to help you add muscles to your skeleton — transforming it into a fully-featured 
-application.
