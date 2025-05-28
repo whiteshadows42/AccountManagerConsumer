@@ -18,11 +18,6 @@ A aplicação consome os seguintes endpoints:
 
 ## Fazendo Build da Aplicação e rodando a aplicação
 Para realizar o build e rodar a aplicação deve executar o seguinte comando:
-* Em modo desenvolvimento:
 ```bash
 ./mvnw
-```
-* Em modo produção:
-```bash
-./mvnw -Pproduction package
 ```
