@@ -43,7 +43,6 @@ public class AccountBalanceView extends Main {
                 throw new RuntimeException(e);
             }
             var accountResponse = this.accountService.getAccountBalanceResponse();
-            System.out.println(accountResponse);
             AccountBalanceResponse response = accountResponse!= null ?accountResponse: new AccountBalanceResponse();
             grid.setItems(response);
             UI.getCurrent().navigate(AccountBalanceView.class);
